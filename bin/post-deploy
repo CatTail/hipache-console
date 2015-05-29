@@ -1,0 +1,14 @@
+#! /bin/bash
+
+# Install and use iojs.
+type nvm > /dev/null
+if [[ $? = 1 ]]
+then
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.3/install.sh | bash
+    . ~/.nvm/nvm.sh
+fi
+
+# Start server.
+nvm install iojs-v2.1.0
+nvm use iojs
+npm start
