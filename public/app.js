@@ -61,8 +61,7 @@
             };
         });
 
-        var admin = nga.application('Hipache Console')
-            .baseApiUrl('http://localhost:3000/');
+        var admin = nga.application('Hipache Console');
 
         var app = nga.entity('app');
 
