@@ -1,38 +1,39 @@
 {
-    "name": "hipache-console",
-    "description": "Hipache web interface",
-    "repository": "CatTail/hipache-console",
-    "version": "0.0.0",
-    "keywords": [],
-    "files": [
-        "index.js"
-    ],
-    "devDependencies": {
-        "co": "^4.5.4",
-        "istanbul": "0",
-        "mocha": "1",
-        "should": "*"
-    },
-    "license": "MIT",
-    "dependencies": {
-        "debug": "*",
-        "gulp": "^3.8.11",
-        "gulp-nodemon": "^2.0.3",
-        "koa": "^0.21.0",
-        "koa-bodyparser": "^2.0.0",
-        "koa-qs": "^2.0.0",
-        "koa-route": "^2.4.1",
-        "koa-static": "^1.4.9",
-        "node-uuid": "^1.4.3",
-        "pm2": "^0.12.15",
-        "thunkify": "^2.1.2"
-    },
-    "scripts": {
-        "start": "./node_modules/.bin/pm2 update; ./node_modules/.bin/pm2 startOrGracefulReload pm2/production.json",
-        "stop": "./node_modules/.bin/pm2 stop kylin",
-        "debug": "./node_modules/.bin/mocha --debug-brk --require ./test/init.js --require should test",
-        "test": "NODE_ENV=test ./node_modules/.bin/mocha --require should --reporter spec",
-        "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
-        "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
-    }
+  "name": "hipache-console",
+  "description": "Hipache web interface",
+  "repository": "CatTail/hipache-console",
+  "version": "0.0.0",
+  "keywords": [],
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "co": "^4.5.4",
+    "istanbul": "0",
+    "mocha": "1",
+    "should": "*"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "*",
+    "gulp": "^3.8.11",
+    "gulp-nodemon": "^2.0.3",
+    "koa": "^0.21.0",
+    "koa-bodyparser": "^2.0.0",
+    "koa-qs": "^2.0.0",
+    "koa-route": "^2.4.1",
+    "koa-static": "^1.4.9",
+    "node-uuid": "^1.4.3",
+    "pm2": "^0.12.15",
+    "redis": "^0.12.1",
+    "thunkify": "^2.1.2"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/pm2 update; ./node_modules/.bin/pm2 startOrGracefulReload pm2/production.json",
+    "stop": "./node_modules/.bin/pm2 stop kylin",
+    "debug": "./node_modules/.bin/mocha --debug-brk --require ./test/init.js --require should test",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --require should --reporter spec",
+    "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
+    "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
+  }
 }
