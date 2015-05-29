@@ -1,0 +1,20 @@
+{
+  "name": "hipache-console",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/CatTail/hipache-console",
+  "authors": [
+    "zhongchiyu <zhongchiyu@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-admin": "~0.7.0"
+  }
+}
